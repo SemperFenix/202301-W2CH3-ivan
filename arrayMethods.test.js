@@ -153,7 +153,7 @@ describe("Given a function", () => {
       const search = (a) => a > 3;
       const r = arr.arrayFilter(array, search);
       const result = [4, 6];
-      expect(r).toBe(result);
+      expect(r).toEqual(result);
 
       const compare2 = (a) => a < 1;
       const r2 = arr.arrayFilter(array, compare2);
