@@ -47,6 +47,15 @@ describe("Given a function", () => {
       const result = 4;
       expect(r).toBe(result);
       expect(array).toEqual(["d", "a", "b", "c"]);
+
+      const array2 = ["a", "b", "c"];
+      const value2 = "d";
+      const value3 = "e";
+      const value4 = "f";
+      const r2 = arr.arrayUnshift(array2, value2, value3, value4);
+      const result2 = 6;
+      expect(r2).toBe(result2);
+      expect(array2).toEqual(["d", "e", "f", "a", "b", "c"]);
     });
   });
 });
@@ -75,6 +84,24 @@ describe("Given a function", () => {
       const result = 2;
       expect(r).toBe(result);
       expect(array).toEqual(["b", "c"]);
+    });
+  });
+});
+
+// Double test for arraySome
+describe("Given a function", () => {
+  describe("When we gives it a value", () => {
+    test("Then it should return true if any element of the array matches and false if not ", () => {
+      const array = ["a", "b", "c"];
+      const element = "b";
+      const r = arr.arrayShift(array, (a) => a === element);
+      const result = true;
+      expect(r).toBe(result);
+
+      const element2 = "c";
+      const r2 = arr.arrayShift(array, (a) => a === element2);
+      const result2 = false;
+      expect(r2).toBe(result2);
     });
   });
 });

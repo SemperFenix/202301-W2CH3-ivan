@@ -42,3 +42,13 @@ export const arrayShift = (array) => {
 
   return arrayLength(array);
 };
+
+export const arraySome = (array, callbackFn) => {
+  for (let i = 0; i < arrayLength(array); i++) {
+    if (callbackFn === true) {
+      return true;
+    }
+  }
+
+  return false;
+};
