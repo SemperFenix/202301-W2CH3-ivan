@@ -6,3 +6,8 @@ export const arrayLength = (array) => {
 
   return i;
 };
+
+export const arrayPush = (array, item) => {
+  array[arrayLength(array)] = item;
+  return arrayLength(array);
+};
