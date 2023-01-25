@@ -145,3 +145,19 @@ describe("Given a function", () => {
     });
   });
 });
+
+describe("Given a function", () => {
+  describe("When we give it a testing function", () => {
+    test("Then it should return every element that satisfies the provided testing function", () => {
+      const array = [2, 4, 6];
+      const search = (a) => a > 3;
+      const r = arr.arrayFilter(array, search);
+      const result = [4, 6];
+      expect(r).toBe(result);
+
+      const compare2 = (a) => a < 1;
+      const r2 = arr.arrayFilter(array, compare2);
+      expect(r2).toEqual([]);
+    });
+  });
+});
