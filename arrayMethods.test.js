@@ -10,3 +10,14 @@ describe("Given a function", () => {
     });
   });
 });
+
+describe("Given a function", () => {
+  describe("When we give it an item", () => {
+    test("Then it should return the new array length (original + 1)", () => {
+      const array = ["a", "b", "c"];
+      const r = arr.arrayPush(array, "d");
+      const result = 4;
+      expect(r).toBe(result);
+    });
+  });
+});
