@@ -170,7 +170,7 @@ describe("Given a function", () => {
   });
 });
 
-/// Test for arrayMap
+// Test for arrayMap
 describe("Given a function", () => {
   describe("When we give it a function", () => {
     test("Then it should return a new array where every element has been passed by the function", () => {
@@ -179,6 +179,24 @@ describe("Given a function", () => {
       const r = arr.arrayMap(array, multiply);
       const result = [6, 12, 18];
       expect(r).toEqual(result);
+    });
+  });
+});
+
+// Test for arrayFindIndex
+describe("Given a function", () => {
+  describe("When we gives it a value or testing function", () => {
+    test("Then it should return the index of the first element that satisfies the provided testing function or -1 if there is none", () => {
+      const array = [2, 4, 6];
+      const search = (a) => a > 4;
+      const r = arr.arrayFindIndex(array, search);
+      const result = 2;
+      expect(r).toBe(result);
+
+      const compare2 = (a) => a < 1;
+      const r2 = arr.arrayFindIndex(array, compare2);
+      const result2 = -1;
+      expect(r2).toBe(result2);
     });
   });
 });
