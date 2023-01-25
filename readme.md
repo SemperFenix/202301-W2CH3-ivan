@@ -28,3 +28,5 @@ Realizaremos toda la instalación inicial (_husky_, _eslint_, y _jest_), además
 ```json
 {  "typeAcquisition": { "include":["jest"] } }`
 ```
+
+## Dudas
