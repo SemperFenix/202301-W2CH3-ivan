@@ -146,6 +146,7 @@ describe("Given a function", () => {
   });
 });
 
+// Test for arrayFilter
 describe("Given a function", () => {
   describe("When we give it a testing function", () => {
     test("Then it should return every element that satisfies the provided testing function", () => {
@@ -158,6 +159,19 @@ describe("Given a function", () => {
       const compare2 = (a) => a < 1;
       const r2 = arr.arrayFilter(array, compare2);
       expect(r2).toEqual([]);
+    });
+  });
+});
+
+/// Test for arrayMap
+describe("Given a function", () => {
+  describe("When we give it a function", () => {
+    test("Then it should return a new array where every element has been passed by the function", () => {
+      const array = [2, 4, 6];
+      const multiply = (a) => a * 3;
+      const r = arr.arrayMap(array, multiply);
+      const result = [6, 12, 18];
+      expect(r).toEqual(result);
     });
   });
 });
