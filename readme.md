@@ -42,4 +42,21 @@ npm i -D @types/jest @babel/plugin-transform-modules-commonjs
 {  "typeAcquisition": { "include":["jest"] } }`
 ```
 
+## Métodos recreados
+
+- [x] array.length
+- [x] array.push
+- [x] array.pop
+- [x] array.shift
+- [x] array.unshift
+- [x] array.some
+- [x] array.every
+- [x] array.find
+- [x] array.filter
+- [x] array.map
+- [x] array.findIndex
+- [ ]
+
 ## Dudas
+
+Ninguna no resuelta con documentación en este ejercicio.
