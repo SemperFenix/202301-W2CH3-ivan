@@ -69,11 +69,12 @@ describe("Given a function", () => {
 // Test for arrayShift
 describe("Given a function", () => {
   describe("When we give it an item", () => {
-    test("Then it should return the new array length (original + 1)", () => {
+    test("Then it should return the new length (original - 1 and the array should not have the first value", () => {
       const array = ["a", "b", "c"];
       const r = arr.arrayShift(array);
       const result = 2;
       expect(r).toBe(result);
+      expect(array).toEqual(["b", "c"]);
     });
   });
 });
