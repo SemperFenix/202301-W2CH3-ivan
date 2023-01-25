@@ -170,7 +170,7 @@ describe("Given a function", () => {
       const array = [2, 4, 6];
       const multiply = (a) => a * 3;
       const r = arr.arrayMap(array, multiply);
-      const result = [4, 8, 12];
+      const result = [6, 12, 18];
       expect(r).toEqual(result);
     });
   });
