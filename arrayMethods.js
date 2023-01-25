@@ -30,5 +30,15 @@ export const arrayUnshift = (array, ...arg) => {
   return arrayLength(array);
 };
 
-const array = [1, 2, 3, 4];
-console.log(arrayUnshift(array, 7, 8, 9, 10, 11), array);
+export const arrayShift = (array) => {
+  let i = 0;
+  const originalLength = arrayLength(array);
+  do {
+    array[i] = array[i + 1];
+    i++;
+  } while (i < originalLength);
+
+  array.length = originalLength - 1;
+
+  return arrayLength(array);
+};
