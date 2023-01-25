@@ -33,3 +33,16 @@ describe("Given a function", () => {
     });
   });
 });
+
+describe("Given a function", () => {
+  describe("When we call it", () => {
+    test("Then it should return the array with the added value/s in the beggining", () => {
+      const array = ["a", "b", "c"];
+      const value1 = "d";
+      const value2 = "e";
+      const r = arr.arrayUnshift(array, value1, value2);
+      const result = ["d", "e", "a", "b", "c"];
+      expect(r).toBe(result);
+    });
+  });
+});
