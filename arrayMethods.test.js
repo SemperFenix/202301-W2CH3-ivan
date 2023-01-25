@@ -33,3 +33,32 @@ describe("Given a function", () => {
     });
   });
 });
+
+// Double test for arrayUnshift to check if it's able to take any number of parameters
+describe("Given a function", () => {
+  describe("When we call it", () => {
+    test("Then it should return the array with the added value/s in the beggining", () => {
+      const array = ["a", "b", "c"];
+      const value1 = "d";
+      const r = arr.arrayUnshift(array, value1);
+      const result = 4;
+      expect(r).toBe(result);
+      expect(array).toEqual(["d", "a", "b", "c"]);
+    });
+  });
+});
+
+describe("Given a function", () => {
+  describe("When we call it", () => {
+    test("Then it should return the array with the added value/s in the beggining", () => {
+      const array = ["a", "b", "c"];
+      const value1 = "d";
+      const value2 = "e";
+      const value3 = "f";
+      const r = arr.arrayUnshift(array, value1, value2, value3);
+      const result = 6;
+      expect(r).toBe(result);
+      expect(array).toEqual(["d", "e", "f", "a", "b", "c"]);
+    });
+  });
+});
