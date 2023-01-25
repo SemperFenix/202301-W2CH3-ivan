@@ -127,3 +127,21 @@ describe("Given a function", () => {
     });
   });
 });
+
+// Double test for arrayFind
+describe("Given a function", () => {
+  describe("When we gives it a value or testing function", () => {
+    test("Then it should return the first element that satisfies the provided testing function", () => {
+      const array = [2, 4, 6];
+      const search = (a) => a > 3;
+      const r = arr.arrayFind(array, search);
+      const result = 4;
+      expect(r).toBe(result);
+
+      const compare2 = (a) => a < 1;
+      const r2 = arr.arrayFind(array, compare2);
+      const result2 = undefined;
+      expect(r2).toBe(result2);
+    });
+  });
+});
