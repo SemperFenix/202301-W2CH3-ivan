@@ -1,5 +1,6 @@
 import * as arr from "./arrayMethods";
 
+// Test for arrayLength
 describe("Given a function", () => {
   describe("When array has 3 items", () => {
     test("Then it should return the number of items", () => {
@@ -11,6 +12,7 @@ describe("Given a function", () => {
   });
 });
 
+// Test for arrayPush
 describe("Given a function", () => {
   describe("When we give it an item", () => {
     test("Then it should return the new array length (original + 1)", () => {
@@ -22,6 +24,7 @@ describe("Given a function", () => {
   });
 });
 
+// Tesat for arrayPop
 describe("Given a function", () => {
   describe("When we call it", () => {
     test("Then it should return the deleted element and take it from the original array", () => {
@@ -59,6 +62,18 @@ describe("Given a function", () => {
       const result = 6;
       expect(r).toBe(result);
       expect(array).toEqual(["d", "e", "f", "a", "b", "c"]);
+    });
+  });
+});
+
+// Test for arrayShift
+describe("Given a function", () => {
+  describe("When we give it an item", () => {
+    test("Then it should return the new array length (original + 1)", () => {
+      const array = ["a", "b", "c"];
+      const r = arr.arrayShift(array);
+      const result = 2;
+      expect(r).toBe(result);
     });
   });
 });
