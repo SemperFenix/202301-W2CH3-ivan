@@ -64,17 +64,23 @@ export const arrayEvery = (array, callbackFn) => {
 };
 
 export const arrayFind = (array, callbackFn) => {
-  let j = 0;
-
-  // Desactivo la regla de eslint porque _a sí que se está utilizando para el bucle for...of
-  // eslint-disable-next-line no-unused-vars
-  for (const _a of array) {
-    if (callbackFn(array[j]) === true) {
-      return array[j];
+  for (const a of array) {
+    if (callbackFn(a) === true) {
+      return a;
     }
-
-    j++;
   }
 
   return undefined;
+};
+
+export const arrayFilter = (array, callbackFn) => {
+  const result = [];
+
+  for (const a of array) {
+    if (callbackFn(a) === true) {
+      arrayPush(result, a);
+    }
+  }
+
+  return result;
 };
