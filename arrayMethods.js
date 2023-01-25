@@ -11,3 +11,5 @@ export const arrayPush = (array, item) => {
   array[arrayLength(array)] = item;
   return arrayLength(array);
 };
+
+export const arrayPop = (array) => {};
