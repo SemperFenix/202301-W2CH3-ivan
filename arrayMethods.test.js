@@ -188,9 +188,9 @@ describe("Given a function", () => {
   describe("When we gives it a value or testing function", () => {
     test("Then it should return the index of the first element that satisfies the provided testing function or -1 if there is none", () => {
       const array = [2, 4, 6];
-      const search = (a) => a > 3;
+      const search = (a) => a > 4;
       const r = arr.arrayFindIndex(array, search);
-      const result = 1;
+      const result = 2;
       expect(r).toBe(result);
 
       const compare2 = (a) => a < 1;
