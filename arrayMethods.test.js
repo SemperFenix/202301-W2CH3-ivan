@@ -21,3 +21,15 @@ describe("Given a function", () => {
     });
   });
 });
+
+describe("Given a function", () => {
+  describe("When we call it", () => {
+    test("Then it should return the deleted element and take it from the original array", () => {
+      const array = ["a", "b", "c", "d"];
+      const r = arr.arrayPop(array);
+      const result = "d";
+      expect(r).toBe(result);
+      expect(array).toEqual(["a", "b", "c"]);
+    });
+  });
+});
