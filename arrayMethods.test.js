@@ -105,3 +105,21 @@ describe("Given a function", () => {
     });
   });
 });
+
+// Double test for arrayEvery
+describe("Given a function", () => {
+  describe("When we gives it a value", () => {
+    test("Then it should return true if any element of the array matches and false if not ", () => {
+      const array = [2, 4, 6];
+      const compare = (a) => a < 10;
+      const r = arr.arrayEvery(array, compare);
+      const result = true;
+      expect(r).toBe(result);
+
+      const compare2 = (a) => a > 10;
+      const r2 = arr.arrayEvery(array, compare2);
+      const result2 = false;
+      expect(r2).toBe(result2);
+    });
+  });
+});
