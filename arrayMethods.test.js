@@ -12,14 +12,21 @@ describe("Given a function", () => {
   });
 });
 
-// Test for arrayPush
+// Double test for arrayPush
 describe("Given a function", () => {
   describe("When we give it an item", () => {
-    test("Then it should return the new array length (original + 1)", () => {
+    test("Then it should return the new array length (original + number of elements) and the array to change", () => {
       const array = ["a", "b", "c"];
       const r = arr.arrayPush(array, "d");
       const result = 4;
       expect(r).toBe(result);
+      expect(array).toEqual(["a", "b", "c", "d"]);
+
+      const array2 = ["a", "b", "c"];
+      const r2 = arr.arrayPush(array2, "d", "e", "f");
+      const result2 = 6;
+      expect(r2).toBe(result2);
+      expect(array2).toEqual(["a", "b", "c", "d", "e", "f"]);
     });
   });
 });
