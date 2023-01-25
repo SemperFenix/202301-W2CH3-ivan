@@ -30,5 +30,3 @@ Realizaremos toda la instalación inicial (_husky_, _eslint_, y _jest_), además
 ```
 
 ## Dudas
-
-En el método arraySome no sé si sería correcto como está hecho o habría que permitir como parámetro que el usuario introdujera una función, eso no lo he conseguido.

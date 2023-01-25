@@ -43,13 +43,22 @@ export const arrayShift = (array) => {
   return arrayLength(array);
 };
 
-export const arraySome = (array, element) => {
-  const compare = (a) => a === element;
+export const arraySome = (array, callbackFn) => {
   for (let i = 0; i < arrayLength(array); i++) {
-    if (compare(array[i]) === true) {
+    if (callbackFn(array[i]) === true) {
       return true;
     }
   }
 
   return false;
+};
+
+export const arrayEvery = (array, callbackFn) => {
+  for (let i = 0; i < arrayLength(array); i++) {
+    if (callbackFn(array[i]) !== true) {
+      return false;
+    }
+  }
+
+  return true;
 };
