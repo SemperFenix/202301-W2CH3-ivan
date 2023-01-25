@@ -18,16 +18,17 @@ export const arrayPop = (array) => {
   return output;
 };
 
-export const arrayUnshift = (array, arg) => {
-  for (let i = arrayLength(array); i > 0; i--) {
-    array[i] = array[i - 1];
+export const arrayUnshift = (array, ...arg) => {
+  for (let i = arrayLength(array) + arrayLength(arg) - 1; i > 0; i--) {
+    array[i] = array[i - arrayLength(arg)];
   }
 
-  array[0] = arg;
+  for (let j = 0; j < arrayLength(arg); j++) {
+    array[j] = arg[j];
+  }
+
   return arrayLength(array);
 };
 
-// eslint-disable-next-line prefer-const
-let array = ["a", "b", "c"];
-
-console.log(arrayUnshift(array, "d"), array);
+const array = [1, 2, 3, 4];
+console.log(arrayUnshift(array, 7, 8, 9, 10, 11), array);
