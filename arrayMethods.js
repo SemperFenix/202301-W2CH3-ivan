@@ -7,8 +7,11 @@ export const arrayLength = (array) => {
   return i;
 };
 
-export const arrayPush = (array, item) => {
-  array[arrayLength(array)] = item;
+export const arrayPush = (array, ...item) => {
+  for (const i of item) {
+    array[arrayLength(array)] = i;
+  }
+
   return arrayLength(array);
 };
 
