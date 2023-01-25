@@ -17,3 +17,17 @@ export const arrayPop = (array) => {
   array.length = [arrayLength(array) - 1];
   return output;
 };
+
+export const arrayUnshift = (array, arg) => {
+  for (let i = arrayLength(array); i > 0; i--) {
+    array[i] = array[i - 1];
+  }
+
+  array[0] = arg;
+  return arrayLength(array);
+};
+
+// eslint-disable-next-line prefer-const
+let array = ["a", "b", "c"];
+
+console.log(arrayUnshift(array, "d"), array);
