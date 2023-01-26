@@ -12,7 +12,7 @@ import { arrayReduce } from "./methods/arrayReduce.js";
 import { arrayShift } from "./methods/arrayShift.js";
 import { arraySome } from "./methods/arraySome.js";
 import { arrayUnshift } from "./methods/arrayUnshift.js";
-// Import * as arr from "./arrayMethods/LibArrayMethods.js";
+import { arrayJoin } from "./methods/arrayJoin.js";
 
 // Test for arrayLength
 describe("Given the arrayLength function", () => {
@@ -80,21 +80,6 @@ describe("Given the arrayUnshift function", () => {
     });
   });
 });
-
-// Adescribe("Given a function", () => {
-//   describe("When we call it", () => {
-//     test("Then it should return the array with the added value/s in the beggining", () => {
-//       const array = ["a", "b", "c"];
-//       const value1 = "d";
-//       const value2 = "e";
-//       const value3 = "f";
-//       const r = arrayUnshift(array, value1, value2, value3);
-//       const result = 6;
-//       expect(r).toBe(result);
-//       expect(array).toEqual(["d", "e", "f", "a", "b", "c"]);
-//     });
-//   });
-// });
 
 // Test for arrayShift
 describe("Given the arrayShift function", () => {
@@ -262,6 +247,21 @@ describe("Given the arrayIncludes function", () => {
       const r2 = arrayIncludes(array, "d");
       const result2 = false;
       expect(r2).toBe(result2);
+    });
+  });
+});
+
+// Test for arrayJoin
+describe("Given the arrayJoin function", () => {
+  describe("When we give it an array and an optional element", () => {
+    test("Then it should return a string where each array item is separated by commas or with the element (if provided)", () => {
+      const array = ["a", "b", "c"];
+      const res = arrayJoin(array);
+      expect(res).toBe("a,b,c");
+      const element = "|";
+      const r = arrayJoin(array, element);
+      const result = "a|b|c";
+      expect(r).toBe(result);
     });
   });
 });
