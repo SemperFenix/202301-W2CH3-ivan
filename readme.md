@@ -56,9 +56,9 @@ npm i -D @types/jest @babel/plugin-transform-modules-commonjs
 - [x] array.map
 - [x] array.findIndex
 - [x] array.reduce
-- [ ] array.includes
+- [x] array.includes
 - [x] array.indexOf
-- [ ] array.join
+- [x] array.join
 
 ## Dudas
 
@@ -76,3 +76,5 @@ npm i -D @types/jest @babel/plugin-transform-modules-commonjs
   ```
 
 - Cómo exportar todas las funciones de un archivo donde se han importado, de forma que no sea necesario importar una por una en el archivo de test.
+
+- Aún falta aprender a configurar sonarCloud para que corra los tests que pasamos por consola.
