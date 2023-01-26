@@ -1,4 +1,4 @@
-import * as arr from "./arrayMethods";
+import * as arr from "lib/arrayMethods/*";
 
 // Test for arrayLength
 describe("Given a function", () => {
