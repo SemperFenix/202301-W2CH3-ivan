@@ -62,15 +62,17 @@ npm i -D @types/jest @babel/plugin-transform-modules-commonjs
 
 ## Dudas
 
-En el test para arrayReduce no he podido utilizar la función .concat para testear usos más complejos de la función, por lo que los he testeado a través de console.log.
+- En el test para arrayReduce no he podido utilizar la función .concat para testear usos más complejos de la función, por lo que los he testeado a través de console.log.
 
-```javascript
-        const array = [
-        [0, 1],
-        [2, 3],
-        [4, 5],
-        ];
-        const summ = accumulator.concat(currentValue), []);
-        const r = arr.arrayReduce(array, summ);
-        expect(r).toEqual(result);
-```
+  ```javascript
+      const array = [
+      [0, 1],
+      [2, 3],
+      [4, 5],
+      ];
+      const summ = accumulator.concat(currentValue), []);
+      const r = arr.arrayReduce(array, summ);
+      expect(r).toEqual(result);
+  ```
+
+- Cómo exportar todas las funciones de un archivo donde se han importado, de forma que no sea necesario importar una por una en el archivo de test.
