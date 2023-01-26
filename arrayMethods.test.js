@@ -97,7 +97,7 @@ describe("Given a function", () => {
 
 // Double test for arraySome
 describe("Given a function", () => {
-  describe("When we gives it a value", () => {
+  describe("When we gives it a function", () => {
     test("Then it should return true if any element of the array matches and false if not ", () => {
       const array = ["a", "b", "c"];
       const element = "b";
@@ -227,6 +227,27 @@ describe("Given a function", () => {
       const r = arr.arrayIndexOf(array, 4);
       const result = 1;
       expect(r).toBe(result);
+
+      const r2 = arr.arrayIndexOf(array, 7);
+      const result2 = -1;
+      expect(r2).toBe(result2);
+    });
+  });
+});
+
+// Test for arrayIncludes
+describe("Given a function", () => {
+  describe("When we give it a value", () => {
+    test("Then it should return true if any element of the array matches and false if not ", () => {
+      const array = ["a", "b", "c"];
+
+      const r = arr.arrayIncludes(array, "b");
+      const result = true;
+      expect(r).toBe(result);
+
+      const r2 = arr.arrayIncludes(array, "d");
+      const result2 = false;
+      expect(r2).toBe(result2);
     });
   });
 });
