@@ -56,25 +56,9 @@ npm i -D @types/jest @babel/plugin-transform-modules-commonjs
 - [x] array.map
 - [x] array.findIndex
 - [x] array.reduce
-- [ ] array.includes
+- [x] array.includes
 - [x] array.indexOf
-- [ ] array.join
-
-## Challenge 4 - 26/01
-
-Continuamos el challenge. Lo primero será crear las _github Actions_ que usaremos durante las pull request, siguiendo el índice visto en la clase. Además, conectaremos SonarCloud a las actions y crearemos el archivo sonar-project.properties para que pueda evaluar testear nuestro código correctamente.
-
-Una vez conectado adecuadamente a estos servicios, llevamos a cabo las correcciones indicadas por los profesores auxiliares y, después, completamos los métodos no terminados.
-
-- [x] Crear github actions (audit y sonar).
-- [x] Crear archivo sonar-project.properties.
-- [x] Comprobar el coverage de los tests (procurar que esté al 100%).
-- [ ] Modificar los describe de los tests para que incluyan el nombre de la función.
-- [ ] Extraer cada método a su propio archivo.
-- [ ] No pasar la variable como parámetro en algunos métodos.
-- [ ] Terminar los métodos restantes:
-  - [x] array.includes
-  - [ ] array.join
+- [x] array.join
 
 ## Dudas
 
@@ -92,3 +76,5 @@ Una vez conectado adecuadamente a estos servicios, llevamos a cabo las correccio
   ```
 
 - Cómo exportar todas las funciones de un archivo donde se han importado, de forma que no sea necesario importar una por una en el archivo de test.
+
+- Aún falta aprender a configurar sonarCloud para que corra los tests que pasamos por consola.
