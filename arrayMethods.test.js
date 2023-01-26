@@ -227,6 +227,10 @@ describe("Given a function", () => {
       const r = arr.arrayIndexOf(array, 4);
       const result = 1;
       expect(r).toBe(result);
+
+      const r2 = arr.arrayIndexOf(array, 7);
+      const result2 = -1;
+      expect(r2).toBe(result2);
     });
   });
 });
