@@ -218,3 +218,15 @@ describe("Given a function", () => {
     });
   });
 });
+
+// Test for arrayIndexOf
+describe("Given a function", () => {
+  describe("When we give it a value", () => {
+    test("Then it should return the index of the first element that equals the provided value", () => {
+      const array = [2, 4, 4, 6];
+      const r = arr.arrayIndexOf(array, 4);
+      const result = 1;
+      expect(r).toBe(result);
+    });
+  });
+});

@@ -57,6 +57,7 @@ npm i -D @types/jest @babel/plugin-transform-modules-commonjs
 - [x] array.findIndex
 - [x] array.reduce
 - [ ] array.includes
+- [x] array.indexOf
 - [ ] array.join
 
 ## Dudas
