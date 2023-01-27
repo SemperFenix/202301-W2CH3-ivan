@@ -48,12 +48,16 @@ describe("Given the arrayPush function", () => {
 // Tesat for arrayPop
 describe("Given the arrayPop function", () => {
   describe("When we call it", () => {
-    test("Then it should return the deleted element and take it from the original array", () => {
+    test("Then it should return the deleted element and take it from the original array or undefined if it is empty", () => {
       const array = ["a", "b", "c", "d"];
       const r = arrayPop(array);
       const result = "d";
       expect(r).toBe(result);
       expect(array).toEqual(["a", "b", "c"]);
+
+      const array2 = [];
+      const r2 = arrayPop(array2);
+      expect(r2).toBe(undefined);
     });
   });
 });
@@ -214,6 +218,18 @@ describe("Given the arrayReduce function", () => {
       const r2 = arrayReduce(array, summ, initialValue);
       const result2 = 14;
       expect(r2).toBe(result2);
+
+      // Const array2 = [
+      //   [0, 1],
+      //   [2, 3],
+      //   [4, 5],
+      // ];
+      // const concate = (acc, current) => {
+      //   acc.concat(current);
+      // };
+
+      // const r3 = arrayReduce(array2, concate, []);
+      // expect(r3).toEqual([0, 1, 2, 3, 4, 5]);
     });
   });
 });
